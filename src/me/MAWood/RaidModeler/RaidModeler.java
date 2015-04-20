@@ -21,7 +21,36 @@ public class RaidModeler {
 		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
 		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
 		
+		// use recursive method to break down a group:
 		
+		// Raid0 r = new Raid0();
+		// r.addRaidMember(process("5{[1000,100,80][1000,100,80][1000,100,80]}"));
+		// r.addRaidMember(process("5{[1000,100,80][1000,100,80][1000,100,80]}"));
+		// return r;
+		
+		// Raid5 r = new Raid5();
+		// r.addRaidMember("[1000,100,80]");
+		// r.addRaidMember("[1000,100,80]");
+		// r.addRaidMember("[1000,100,80]");
+		// return r;
+		
+		// Raid5 r = new Raid5();
+		// r.addRaidMember("[1000,100,80]");
+		// r.addRaidMember("[1000,100,80]");
+		// r.addRaidMember("[1000,100,80]");
+		// return r;
+		
+		// 6x :
+		
+		// Drive r = new Drive(1000, 100, 80);
+		// return r;
+		
+		
+	}
+	
+	RaidMember process(String input) {
+		
+		return null;		
 	}
 	
 	void outputResult(RaidMember r) {
