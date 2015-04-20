@@ -8,8 +8,18 @@ public class RaidModeler {
 	static final String speedUnit = "MB/s";
 
 	public static void main(String[] args) {
-		// Planned input format 0{5{[1000,100,80][1000,100,80][1000,100,80]}5{[1000,100,80][1000,100,80][1000,100,80]}}
-		// That statement would define a raid 0 array or two raid 5 arrays each consisting of three 1tb HDD 100 MB/s read 80 MB/s write.
+		// Planned input format 
+		// 0{5{[1000,100,80][1000,100,80][1000,100,80]}5{[1000,100,80][1000,100,80][1000,100,80]}}
+		// this will create this structure:
+		// Raid 0:
+		//    Raid 5:
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
+		//    Raid 5:
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
+		//       HDD: 1000 GB read: 100 MB/s write 80 MB/s
 		
 		
 	}
