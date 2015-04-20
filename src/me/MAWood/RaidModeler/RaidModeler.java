@@ -3,35 +3,21 @@ package me.MAWood.RaidModeler;
 import me.MAWood.RaidModeler.RaidMembers.*;
 
 public class RaidModeler {
+	
+	static final String capacityUnit = "GB";
+	static final String speedUnit = "MB/s";
 
 	public static void main(String[] args) {
-		String capacityUnit = "GB";
-		String speedUnit = "MB/s";
+		// Planned input format 0{5{[1000,100,80][1000,100,80][1000,100,80]}5{[1000,100,80][1000,100,80][1000,100,80]}}
+		// That statement would define a raid 0 array or two raid 5 arrays each consisting of three 1tb HDD 100 MB/s read 80 MB/s write.
 		
-		// RAID 50 with 8 4tb drives
 		
-		Drive HDD = new Drive(4000, 100, 80);
-		
-		Raid0 r1 = new Raid0();
-		
-		Raid5 r2 = new Raid5();
-		r2.addRaidMember(HDD);
-		r2.addRaidMember(HDD);
-		r2.addRaidMember(HDD);
-		r2.addRaidMember(HDD);
-		
-		Raid5 r3 = new Raid5();
-		r3.addRaidMember(HDD);
-		r3.addRaidMember(HDD);
-		r3.addRaidMember(HDD);
-		r3.addRaidMember(HDD);
-		
-		r1.addRaidMember(r2);
-		r1.addRaidMember(r3);
-		
-		System.out.println("Members capacity speed: " + r1.getCapacity() + " " + capacityUnit);
-		System.out.println("Members read speed: " + r1.getReadSpeed() + " " + speedUnit);
-		System.out.println("Members write speed: " + r1.getWriteSpeed() + " " + speedUnit);
+	}
+	
+	void outputResult(RaidMember r) {
+		System.out.println("Members capacity speed: " + r.getCapacity() + " " + capacityUnit);
+		System.out.println("Members read speed: " + r.getReadSpeed() + " " + speedUnit);
+		System.out.println("Members write speed: " + r.getWriteSpeed() + " " + speedUnit);
 	}
 
 }

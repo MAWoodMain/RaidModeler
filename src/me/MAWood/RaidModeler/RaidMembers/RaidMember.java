@@ -4,10 +4,10 @@ package me.MAWood.RaidModeler.RaidMembers;
 public abstract class RaidMember {
 	
 	
-	abstract int getCapacity();
+	public abstract int getCapacity();
 	
-	abstract int getReadSpeed();
+	public abstract int getReadSpeed();
 	
-	abstract int getWriteSpeed();
+	public abstract int getWriteSpeed();
 	
 }

@@ -11,17 +11,17 @@ public class Drive extends RaidMember {
 	}
 	
 	@Override
-	int getCapacity() {
+	public int getCapacity() {
 		return this.capacity;
 	}
 
 	@Override
-	int getReadSpeed() {
+	public int getReadSpeed() {
 		return this.read;
 	}
 
 	@Override
-	int getWriteSpeed() {
+	public int getWriteSpeed() {
 		return this.write;
 	}
 
